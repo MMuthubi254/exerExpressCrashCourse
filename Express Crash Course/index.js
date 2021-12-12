@@ -1,7 +1,7 @@
 const { lightgoldenrodyellow } = require('color-name');
 const express = require ('express');
 const path  = require ('path');
-const expresshandlebars = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const logger = require('./middleware/logger');
 const members = require( './Members');
 
@@ -11,7 +11,7 @@ const app = express();
 //app.use(logger);
 
 //Handlebars middleware
-app.engine('handlebars', expresshandlebars({ defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 //Body Parser Middleware
